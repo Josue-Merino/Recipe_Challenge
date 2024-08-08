@@ -1,0 +1,196 @@
+/* URL DE LAS FUENTES */
+
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+:root{
+    /* VARIABLES DE LA FUENTES */
+    --fuentePrincipal:  "Young Serif", serif;
+    --fuenteSecuendaria:"Outfit", serif;
+
+    /* PALETA DE COLORES */
+    --White: #FFFFFF;
+    --Stone-100: #F0E4D2;
+    --Stone-150: #DED4CC;
+    --Stone-600: #594F4C;
+    --Stone-900: #2F2B29;
+    --Brown-800: #73372C;
+    --Rose-800: #6A1E41;
+    --Rose-50: #FFF5F7;
+
+}
+
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%; /* --> 1REM === 10PX */
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body{
+    font-family: var(--fuenteSecuendaria);
+    font-size: 1.6rem;
+    background-color: rgb(228, 212, 225);
+}
+
+/* GLOBALES */
+
+img{
+    max-width: 100%;
+    display: block;
+}
+
+
+/* ESTILOS */
+
+.contenedor{  /* CARD */
+    max-width: 120rem;
+    margin: 0 auto;
+    background-color: var(--White);
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 4rem;
+    font-family: var(--fuentePrincipal);
+    font-weight: 400;
+    padding-left: 3rem;
+    
+}
+
+/* MEDIA QUERY PARA PC --IMAGEN Y TÍTULO --*/
+
+@media (min-width: 768px){ 
+    .contenedor {
+        width: 70rem;
+        margin: 0 auto;
+        margin-top: 6rem;
+        padding: 1rem;
+        border-radius: 2rem;
+        margin-bottom: 6rem;
+    }
+    .imagen{
+        margin: 3rem 0;
+        width: 62rem;   
+        margin-left: 3rem;
+    }
+    img {
+        display: block;
+        width: 100%;
+        border-radius: 1rem;
+    }
+    h1 {
+        margin: 2rem 0;
+    }
+}
+
+/*DESCRIPCION DEL OMELETTE */
+.section {
+    max-width: 85%;
+    text-align: justify;
+    line-height: 1.5;
+    color: var(--Stone-600);
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+@media (min-width: 768px){ 
+    .section {
+        max-width: 95%;
+    }
+}
+
+/* PREPARATION TIME */ 
+
+.preparation-time{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1rem 2rem;
+    line-height: 2;
+    background-color: var(--Rose-50);
+    margin: 3rem;
+    margin-bottom: 1rem;
+    border-radius: 1rem;
+}
+.preparation-time h3{
+    color: var(--Rose-800);
+    font-size: 2.3rem;
+    margin: 0;
+    padding-left: 1rem;
+}
+.preparation-time ul{
+    width: 25rem;
+}
+@media (min-width: 768px){ 
+    .preparation-time ul{
+        width: 100%;
+    }
+}
+.preparation-time span {
+    color: var(--Stone-900);
+    font-weight: 600;
+}
+
+.preparation-time li {
+    color: var(--Stone-600);
+    padding-left: 2rem;
+}
+
+/* PREPARATION */
+
+.preparation{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1rem;
+    line-height: 2;
+    margin: 3rem;
+    margin-top: 1rem;
+    margin-bottom: 0;
+    border-bottom: 1px solid var(--Stone-150);
+    
+}
+.preparation h2{
+    color: var(--Brown-800);
+    font-size: 4rem;
+    font-family: var(--fuentePrincipal);
+    font-weight: 400;
+    margin: 0;
+}
+.preparation li {
+    color: var(--Stone-600);
+    padding-left: 2rem;
+    text-align: justify;
+}
+.preparation span {
+    color: var(--Stone-900);
+    font-weight: 600;
+}
+
+/* INFORMACION NUTRIMENTAL */
+
+.nutritional {
+    border: none;
+}
+
+.nutrition-content{
+    display: flex;
+    justify-content:space-between;
+    flex-direction: row;
+    border-bottom: 1px solid var(--Stone-150);
+}
+.nutrition-content .n-info{
+    color: var(--Brown-800);
+    font-weight: 800;
+}
+.last{
+    display: flex;
+    flex-direction: row;
+    border-bottom: none;
+}
+
